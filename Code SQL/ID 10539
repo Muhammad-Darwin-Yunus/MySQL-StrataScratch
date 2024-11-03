@@ -26,3 +26,15 @@ select up.user_id,count(distinct activity_type) total_activity
 from user_profiles up
 inner join activity_log al using (user_id)
 group by up.user_id;
+
+Output:
+
+user_id |	total_activity
+  1	            2
+  2            	3
+  3            	3
+  6	            2
+  7            	3
+  8	            3
+  9	            4
+  10	           1
