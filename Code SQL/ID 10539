@@ -1,0 +1,28 @@
+>.<
+
+Title: User Activity Count 
+Link: https://platform.stratascratch.com/coding/10539-user-activity-count?code_type=3
+Level: Easy
+
+Count the unique activities for each user, ensuring users with no activities are also included.
+The output should show each user's ID and their activity count, with zero for users who have no activities.
+
+Data user_profiles:
+user_id: int
+name: varchar
+email: varchar
+signup_date: datetime
+
+Data activity_log:
+user_id: int
+activity_type: varchar
+activity_timestamp: datetime
+
+>.<
+
+Solution:
+
+select up.user_id,count(distinct activity_type) total_activity
+from user_profiles up
+inner join activity_log al using (user_id)
+group by up.user_id;
