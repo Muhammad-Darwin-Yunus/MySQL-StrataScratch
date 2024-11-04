@@ -27,9 +27,9 @@ order by total_sales desc;
 
 Output:
 
-seller_id	| total_sales	| product_category | market_place	| month
-s236	        36486.73	      electronics	        in	          2024-01
-s790	        31050.13	      clothing	            in	        2024-01
-s918	        24286.4	          books	              uk	          2024-01
-s272	        11324.61	      toys	              us	          2024-01
+seller_id | total_sales | product_category | market_place | month
+s236          36486.73      electronics          in	        2024-01
+s790          31050.13      clothing             in         2024-01
+s918          24286.4       books                uk         2024-01
+s272          11324.61      toys                 us         2024-01
 
