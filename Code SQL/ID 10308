@@ -1,0 +1,32 @@
+>.<
+
+Title: Salaries Differences 
+Link: https://platform.stratascratch.com/coding/10308-salaries-differences?code_type=3
+Level: Easy
+
+Write a query that calculates the difference between the highest salaries found in the marketing and engineering departments.
+Output just the absolute difference in salaries.
+
+Data db_employee:
+id: int
+first_name: varchar
+last_name: varchar
+salary: int
+department_id: int
+
+Data db_dept:
+id: int
+department: varchar
+
+>.<
+
+Solution:
+
+select abs(
+(select max(salary) from db_employee where department_id='4')-(select max(salary) from db_employee where department_id='1')
+) as salary_different;
+
+Output:
+
+salary_different
+2400
