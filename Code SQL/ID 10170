@@ -1,0 +1,38 @@
+>.<
+
+Title: Gender With Most Doctor Appointments
+Link: https://platform.stratascratch.com/coding/10170-gender-with-most-doctor-appointments?code_type=3
+Level: Easy
+
+Find the gender that has made the most number of doctor appointments.
+Output the gender along with the corresponding number of appointments.
+
+Data medical_appointments:
+patientid: float
+appointmentid: int
+gender: varchar
+scheduledday: datetime
+appointmentday: datetime
+age: int
+neighbourhood:varchar
+scholarship: int
+hipertension int
+diabetes: int
+alcoholism: int
+handcap: int
+sms_received: int
+no_show: varchar
+
+>.<
+
+Solution:
+
+select gender,count(*) total_pertemuan
+from medical_appointments
+group by gender;
+
+Output:
+
+gender | total_pertemuan
+M            42
+F            58
