@@ -1,0 +1,34 @@
+>.<
+
+Title: Peak Online Time
+Link: https://platform.stratascratch.com/coding/10361-peak-online-time?code_type=3
+Level: Easy
+
+You are given a dataset from Amazon that tracks and aggregates user activity on their platform in certain time periods. 
+For each device type, find the time period with the highest number of active users.
+The output should contain 'user_count', 'time_period', and 'device_type', where 'time_period' is a concatenation of 'start_timestamp' and 'end_timestamp', like ; "start_timestamp to end_timestamp".
+
+Data user_activity:
+start_timestamp: datetime
+end_timestamp: datetime
+user_count: int
+device_type: varchar
+time_difference: float
+
+>.<
+
+Solution:
+
+select user_count,concat(start_timestamp,'to',end_timestamp) as time_period,device_type
+from (
+Select start_timestamp, end_timestamp, user_count, device_type,ROW_NUMBER() OVER (PARTITION BY device_type ORDER BY user_count DESC) AS rn
+from user_activity
+) ranked_activity
+where rn = 1; 
+
+Output:
+
+user_count | time_period                         | device_type
+100      2024-01-25 10:14:00to2024-01-25 11:04:00    desktop
+100      2024-01-25 16:38:00to2024-01-25 18:07:00    mobile
+100      2024-01-25 05:18:00to2024-01-25 06:06:00    tablet
