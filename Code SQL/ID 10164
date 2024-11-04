@@ -1,0 +1,30 @@
+>.<
+
+Title: Total AdWords Earnings
+Link: https://platform.stratascratch.com/coding/10164-total-adwords-earnings?code_type=3
+Level: Easy
+
+Find the total AdWords earnings for each business type.
+Output the business types along with the total earnings.
+
+Data google_adwords_earnings:
+business_type: varchar
+n_employees: int
+year: int
+adwords_earnings: int
+
+>.<
+
+Solution:
+
+select business_type,sum(adwords_earnings) adwords_earnings
+from google_adwords_earnings
+group by business_type
+order by adwords_earnings desc;
+
+Output:
+
+business_type | adwords_earnings
+media              247914579
+transport          132323280
+handyman            6042187
