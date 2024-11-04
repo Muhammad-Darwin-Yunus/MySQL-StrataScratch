@@ -1,0 +1,34 @@
+>.<
+
+Title: Top Monthly Sellers
+Link: https://platform.stratascratch.com/coding/10362-top-monthly-sellers?code_type=3
+Level: Easy
+
+You are provided with a transactional dataset from Amazon that contains detailed information about sales across different products and marketplaces.
+Your task is to list the top 3 sellers in each product category for January.
+The output should contain 'seller_id' , 'total_sales' ,'product_category' , 'market_place', and 'month'.
+
+Data sales_data:
+seller_id: varchar
+total_sales: float
+product_category: varchar
+market_place: varchar
+month: datetime
+
+>.<
+
+Solution:
+
+select seller_id,total_sales,product_category,market_place,month
+from sales_data
+where month >= '2024-01' and month < '2024-02'
+group by product_category
+order by total_sales desc;
+
+Output:
+
+seller_id	| total_sales	| product_category	| market_place	| month
+  s236	      36486.73	    electronics	            in	      2024-01
+  s790	      31050.13	    clothing	              in	      2024-01
+  s918	      24286.4	      books	                  uk	      2024-01
+  s272	      11324.61	    toys	                  us	      2024-01
