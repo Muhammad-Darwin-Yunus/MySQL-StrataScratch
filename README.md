@@ -25,4 +25,3 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 10362|[Top Monthly Sellers](https://platform.stratascratch.com/coding/10362-top-monthly-sellers?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010362)
 |ID 10363|[Weekly Orders Report](https://platform.stratascratch.com/coding/10363-weekly-orders-report?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010363)
 |ID 10367|[Aggregate Listening Data](https://platform.stratascratch.com/coding/10367-aggregate-listening-data?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010367)
-|ID 10539|[User Activity Count](https://platform.stratascratch.com/coding/10539-user-activity-count?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010539)
