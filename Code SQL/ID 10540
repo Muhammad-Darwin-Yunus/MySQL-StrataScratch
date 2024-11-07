@@ -7,7 +7,7 @@ Level: Easy
 Calculate the average score for each project, but only include projects where more than one team member has provided a score.
 Your output should include the project ID and the calculated average score for each qualifying project.
 
-Data crunchbase_acquisitions:
+Data project_data:
 project_id: int
 team_member_id: int
 score: int
