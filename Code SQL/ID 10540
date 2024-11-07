@@ -1,0 +1,34 @@
+>.<
+
+Title: Calculate Average Score
+Link: https://platform.stratascratch.com/coding/10540-calculate-average-score?code_type=3
+Level: Easy
+
+Calculate the average score for each project, but only include projects where more than one team member has provided a score.
+Your output should include the project ID and the calculated average score for each qualifying project.
+
+Data crunchbase_acquisitions:
+project_id: int
+team_member_id: int
+score: int
+date: datetime
+
+>.<
+
+Solution:
+
+select project_id,avg(score)
+from project_data
+where team_member_id > 1
+group by project_id	;
+
+Output:
+
+project_id | avg(score)
+101            5.4
+102            3.12
+103            55.67
+104            5.2
+105            17.33
+106            7
+107            9
