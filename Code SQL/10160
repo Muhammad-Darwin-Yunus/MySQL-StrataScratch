@@ -1,0 +1,38 @@
+>.<
+
+Title: Rank guests based on their ages
+Link: https://platform.stratascratch.com/coding/10160-rank-guests-based-on-their-ages?code_type=3
+Level: Easy
+
+Rank guests based on their ages.
+Output the guest id along with the corresponding rank.
+Order records by the age in descending order.
+
+Data airbnb_guests:
+guest_id: int
+nationality: varchar
+gender: varchar
+age: int
+
+>.<
+
+Solution:
+
+select guest_id,age,rank() over(order by age desc) as rank_age
+from airbnb_guests;
+
+Output:
+
+guest_id  | age  | rank_age
+8            37      1
+5            33      2
+6            32      3
+9            29      4
+10          28      5
+2            27      6
+7            27      6
+3            24      8
+11          24      8
+1            23      10
+0            21      11
+4            19      12
