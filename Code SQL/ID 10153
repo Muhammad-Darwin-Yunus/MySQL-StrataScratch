@@ -6,7 +6,7 @@ Level: Easy
 
 Find the number of Yelp businesses that sell pizza.
 
-Data airbnb_guests:
+Data yelp_business:
 business_id: varchar
 name: varchar
 neighborhood: varchar
