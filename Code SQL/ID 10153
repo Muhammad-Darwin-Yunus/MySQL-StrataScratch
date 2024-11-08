@@ -1,0 +1,39 @@
+>.<
+
+Title: Find the number of Yelp businesses that sell pizza
+Link: https://platform.stratascratch.com/coding/10153-find-the-number-of-yelp-businesses-that-sell-pizza?code_type=3
+Level: Easy
+
+Find the number of Yelp businesses that sell pizza.
+
+Data airbnb_guests:
+business_id: varchar
+name: varchar
+neighborhood: varchar
+address: varchar
+city: varchar
+state: varchar
+postal_code: varchar
+latitude: float
+longitude: float
+stars: float
+review_count: int
+is_open: int
+categories: varchar
+
+>.<
+
+Solution:
+
+select business_id,name
+from yelp_business
+where categories like '%pizza' or 'pizza%' or '%_pizza' or 'pizza_%'
+or name like '%pizza' or 'pizza%' or '%_pizza' or 'pizza_%';
+
+Output:
+
+business_id            | name
+dRb2Xq8jorJV6tDCgmaQUg	Papa John's Pizza
+MYB1ZMspBk1Xc_awp_PtSw	Naked City Pizza Express
+XVDR44P_74FmA0ANanm4CQ	House of Pizza
+EsE8KTPqAJ2MjJdmuAifRw	Dante's Inferno Flats
