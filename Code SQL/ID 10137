@@ -1,0 +1,29 @@
+>.<
+
+Title: Even-numbered IDs Hired in June
+Link: https://platform.stratascratch.com/coding/10137-find-workers-with-an-even-number-for-worker-id?code_type=3
+Level: Easy
+
+Find employees who started in June and have even-numbered employee IDs.
+
+Data worker:
+worker_id: int
+first_name: varchar
+last_name: varchar
+salary: int
+joining_date: datetime
+department: varchar
+
+>.<
+
+Solution:
+
+select worker_id,joining_date
+from worker
+where month(joining_date) = 6 and worker_id % 2 = 0;
+
+Output:
+
+worker_id  |  joining_date
+2            2014-06-11
+6            2014-06-11
