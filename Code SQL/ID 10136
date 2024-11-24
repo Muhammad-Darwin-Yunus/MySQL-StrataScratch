@@ -1,0 +1,30 @@
+>.<
+
+Title: Odd-numbered ID's Hired in February
+Link: https://platform.stratascratch.com/coding/10136-find-workers-with-an-odd-number-for-worker-id?code_type=3
+Level: Easy
+
+Find employees who started in February and have odd-numbered employee IDs.
+
+Data worker:
+worker_id: int
+first_name: varchar
+last_name: varchar
+salary: int
+joining_date: datetime
+department: varchar
+
+>.<
+
+Solution:
+
+select worker_id,concat(first_name," ",last_name) fullname,joining_date
+from worker
+where worker_id % 2 != 0
+and month(joining_date) = 2;
+
+Output:
+
+worker_id  |  fullname  |  joining_date
+1          Monika Arora    2014-02-20 00:00:00
+3          Vishal Singhal  2014-02-20 00:00:00
