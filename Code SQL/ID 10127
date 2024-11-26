@@ -1,0 +1,26 @@
+>.<
+
+Title: Calculate Samantha's and Lisa's total sales revenue
+Link: https://platform.stratascratch.com/coding/10127-calculate-samanthas-and-lisas-total-sales-revenue?code_type=3
+Level: Easy
+
+What is the total sales revenue of Samantha and Lisa?
+
+Data sales_performance:
+salesperson: varchar
+widget_sales: int
+sales_revenue: int
+id: int
+
+>.<
+
+Solution:
+
+select "Samantha_Lisa" as salesperson,sum(sales_revenue) total_sales_revenue
+from sales_performance
+where salesperson in ("Samantha","Lisa");
+
+Output:
+
+salesperson    |  total_sales_revenue
+Samantha_Lisa        112650
