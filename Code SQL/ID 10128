@@ -1,0 +1,28 @@
+>.<
+
+Title: Count the number of movies that Abigail Breslin nominated for oscar
+Link: https://platform.stratascratch.com/coding/10128-count-the-number-of-movies-that-abigail-breslin-nominated-for-oscar?code_type=3
+Level: Easy
+
+Count the number of movies that Abigail Breslin was nominated for an oscar.
+
+Data oscar_nominees:
+year: int
+category: varchar
+nominee: varchar
+movie: varchar
+winner: bool
+id: int
+
+>.<
+
+Solution:
+
+select nominee,count(winner) nominated_oscar
+from oscar_nominees
+where nominee = "Abigail Breslin";
+
+Output:
+
+nominee          |  nominated_oscar
+Abigail Breslin        1
