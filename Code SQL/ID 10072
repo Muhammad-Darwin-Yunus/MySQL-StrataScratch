@@ -1,0 +1,42 @@
+>.<
+
+Title: Guest Or Host Kindness
+Link: https://platform.stratascratch.com/coding/10072-guest-or-host-kindness?code_type=3
+Level: Easy
+
+Find whether hosts or guests give higher review scores based on their average review scores. Output the higher of the average review score rounded to the 2nd decimal spot (e.g., 5.11).
+
+Data airbnb_reviews:
+from_user: int
+to_user: int
+from_type: varchar
+to_type: varchar
+review_score: int
+
+>.<
+
+Solution:
+
+with average_score as (
+select from_type as type, avg(review_score) as average_score
+from airbnb_reviews
+group by from_type
+
+union all
+
+select to_type as type, avg(review_score) as average_score
+from airbnb_reviews
+group by to_type
+)
+
+select type, round(max(average_score), 2) as higher_avg_score
+from average_score
+where type in ('guest','host')
+group by type
+order by higher_avg_score desc
+limit 1;
+
+Output:
+
+type  |  higher_avg_score
+guest        5.29
