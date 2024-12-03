@@ -1,0 +1,35 @@
+>.<
+
+Title: Find the number of reviews received by Lo-Lo's Chicken & Waffles for each star
+Link: https://platform.stratascratch.com/coding/10058-find-the-number-of-reviews-received-by-lo-los-chicken-waffles-for-each-star?code_type=3
+Level: Easy
+
+Find the number of reviews received by Lo-Lo's Chicken & Waffles for each star.
+Output the number of stars along with the corresponding number of reviews.
+Sort records by stars in ascending order.
+
+Data yelp_reviews:
+business_name: varchar
+review_id: varchar
+user_id: varchar
+stars: varchar
+review_date: datetime
+review_text: varchar
+funny: int
+useful: int
+cool: int
+
+>.<
+
+Solution:
+
+select business_name,stars,count(review_id) as total_review_id
+from yelp_reviews
+where business_name = "Lo-Lo's Chicken & Waffles"
+group by stars
+order by stars asc;
+
+Output:
+
+business_name            |  stars  |  total_review_id
+Lo-Lo's Chicken & Waffles      5            1
