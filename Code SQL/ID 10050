@@ -1,0 +1,38 @@
+>.<
+
+Title: Find the review count for one-star businesses from yelp
+Link: https://platform.stratascratch.com/coding/10050-find-the-review-count-for-one-star-businesses-from-yelp?code_type=3
+Level: Easy
+
+Find the review count for one-star businesses from yelp.
+Output the name along with the corresponding review count.
+
+Data yelp_business:
+address: text
+business_id: text
+categories: text
+city: text
+is_open: bigint
+latitude: double
+longitude: double
+name: text
+neighborhood: text
+postal_code: text
+review_count: bigint
+stars: double
+state: text
+
+>.<
+
+Solution:
+
+select name, review_count
+from yelp_business
+where stars = 1;
+
+Output:
+
+name                              |  review_count
+All Colors Mobile Bumper Repair            4
+Dry Clean Vegas                            4
+The Cuyahoga Room                          3
