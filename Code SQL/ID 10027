@@ -1,0 +1,39 @@
+>.<
+
+Title: Find the number of US-based wineries that have expensive wines (price >= 200)
+Link: https://platform.stratascratch.com/coding/10027-find-the-number-of-us-based-wineries-that-have-expensive-wines-price-200?code_type=3
+Level: Easy
+
+Find the number of US-based wineries that have expensive wines.
+A wine is considered to be expensive if its price is $200 or more.
+
+Data winemag_p1:
+country: text
+description: text
+designation: text
+id: bigint
+points: bigint
+price: double
+province: text
+region_1: text
+region_2: text
+variety: text
+winery: text
+
+>.<
+
+Solution:
+
+select id,country,price
+from winemag_p1
+where price >= 200  and country = 'US'
+order by price desc;
+
+Output:
+
+id    |  country  |  price
+74057      US        625
+83298      US        350
+135895    US          225
+116551    US          200
+116564    US          200
