@@ -24,7 +24,7 @@ winery: text
 
 Solution:
 
-select distinct(region_1)
+select distinct region_1
 from winemag_p2
 where taster_name = 'Roger Voss' and region_1 is not null;
 
