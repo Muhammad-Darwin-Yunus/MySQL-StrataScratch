@@ -1,0 +1,28 @@
+>.<
+
+Title: Find the total costs and total customers acquired in each year
+Link: https://platform.stratascratch.com/coding/10009-find-the-total-costs-and-total-customers-acquired-in-each-year?code_type=3
+Level: Easy
+
+Find prices for Spanish, Italian, and French wines. Output the price.
+
+Data uber_advertising:
+advertising_channel: text
+customers_acquired: bigint
+money_spent: bigint
+year: bigint
+
+>.<
+
+Solution:
+
+select year,sum(money_spent) total_money_spent,sum(customers_acquired) total_acquired_customers
+from uber_advertising
+group by year;
+
+Output:
+
+year  |  total_money_spent  |  total_acquired_customers
+2019      11373000                      11751
+2018      1711055                        12350
+2017      4329200                        13400
