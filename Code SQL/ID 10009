@@ -4,7 +4,8 @@ Title: Find the total costs and total customers acquired in each year
 Link: https://platform.stratascratch.com/coding/10009-find-the-total-costs-and-total-customers-acquired-in-each-year?code_type=3
 Level: Easy
 
-Find prices for Spanish, Italian, and French wines. Output the price.
+Find the total costs and total customers acquired in each year.
+Output the year along with corresponding total money spent and total acquired customers.
 
 Data uber_advertising:
 advertising_channel: text
