@@ -1,0 +1,30 @@
+>.<
+
+Title: Average Cost Of Each Request
+Link: https://platform.stratascratch.com/coding/10007-average-cost-of-each-request?code_type=3
+Level: Easy
+
+Find the total costs and total customers acquired in each year.
+Output the year along with corresponding total money spent and total acquired customers.
+
+Data uber_ride_requests:
+distance_to_travel: double
+driver_to_client_distance: double
+monetary_cost: double
+request_id: bigint
+request_status: text
+
+>.<
+
+Solution:
+
+select request_status,avg(monetary_cost) avg_cost
+from uber_ride_requests
+where request_status = 'success' or request_status = 'fail'
+group by request_status;
+
+Output:
+
+request_status  |  avg_cost
+success              11.76
+fail                  13.54
