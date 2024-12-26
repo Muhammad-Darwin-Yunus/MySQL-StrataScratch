@@ -1,0 +1,29 @@
+>.<
+
+Title: Hour Of Highest Gas Expense
+Link: https://platform.stratascratch.com/coding/10005-hour-of-highest-gas-expense?code_type=3
+Level: Easy
+
+Find the hour with the highest gasoline cost. Assume there's only 1 hour with the highest gas cost.
+
+Data lyft_rides:
+gasoline_cost: double
+hour: bigint
+index: bigint
+travel_distance: double
+weather: text
+
+>.<
+
+Solution:
+
+select hour as hour_gasoline_cost
+from lyft_rides
+group by hour
+order by gasoline_cost desc
+limit 1;
+
+Output:
+
+hour_gasoline_cost
+23
