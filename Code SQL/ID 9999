@@ -1,0 +1,46 @@
+>.<
+
+Title: Find songs that are ranked between 8-10
+Link: https://platform.stratascratch.com/coding/9999-find-songs-that-are-ranked-between-8-10?code_type=3
+Level: Easy
+
+Find songs that are ranked between 8-10.
+Output the track name along with the corresponding position, ordered ascendingly.
+
+Data spotify_worldwide_daily_song_ranking:
+artist: text
+date: datetime
+id: bigint
+position: bigint
+region: text
+streams: bigint
+trackname: text
+url: text
+
+>.<
+
+Solution:
+
+select trackname,position
+from spotify_worldwide_daily_song_ranking
+where position between 8 and 10
+order by position asc;
+    
+Output:
+
+trackname                          |  position
+Una Lady Como Tu                          8
+Alone                                    8
+Perfect Duet (Ed Sheeran & Beyonce)      8
+Make Me (Cry)                            8
+Attention                                8
+Castle on the Hill                        9
+Una Lady Como Tu                          9
+Scared to Be Lonely                        9
+Mobali                                     9
+Chocolat (feat. Awa)                      9
+Bling Bling                                10
+Ahora Dice                                10
+Vacaciones                                10
+You Don't Know Me - Radio Edit            10
+El Party                                  10
