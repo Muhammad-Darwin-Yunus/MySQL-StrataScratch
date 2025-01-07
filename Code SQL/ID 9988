@@ -1,0 +1,40 @@
+>.<
+
+Title: Find the top 3 jobs with the highest overtime pay rate
+Link: https://platform.stratascratch.com/coding/9988-find-the-top-3-jobs-with-the-highest-overtime-pay-rate?code_type=3
+Level: Easy
+
+Get the job titles of the 3 employees who received the most overtime pay
+Output the job title of selected records.
+
+Data sf_public_salaries:
+agency: text
+basepay: double
+benefits: double
+employeename: text
+id: bigint
+jobtitle: text
+notes: datetime
+otherpay: double
+overtimepay: double
+status: text
+totalpay: double
+totalpaybenefits: double
+year: bigint
+
+>.<
+
+Solution:
+
+select jobtitle,sum(overtimepay) most_overtimepay
+from sf_public_salaries
+group by jobtitle
+order by most_overtimepay desc
+limit 3;
+    
+Output:
+
+jobtitle                          |  most_overtimepay
+CAPTAIN III (POLICE DEPARTMENT)          95628.72
+Deputy Sheriff                            76031.16
+EMT/Paramedic/Firefighter                74246.42
