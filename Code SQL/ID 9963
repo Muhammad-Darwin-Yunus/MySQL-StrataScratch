@@ -1,0 +1,55 @@
+>.<
+
+Title: Top 10 QBs
+Link: https://platform.stratascratch.com/coding/9963-top-10-qbs?code_type=3
+Level: Easy
+
+Find the top quarterbacks with the most points in a single game in 2016.
+Rank them in such a way where ties in game points are assigned the same rank.
+Ensure the output includes all quarterbacks ranked in the top 10, even if ties result in more than 10 records.
+Display the quarterback and their game points, ordered by rank.
+
+Data qbstats_2015_2016:
+att: bigint
+cmp: bigint
+game_points: bigint
+home_away: text
+int: bigint
+lg: text
+loss: bigint
+qb: text
+rate: double
+sack: bigint
+td: bigint
+yds: bigint
+year: bigint
+ypa: double
+
+>.<
+
+Solution:
+
+with RankDB as (
+select qb,game_points,rank() over (order by game_points desc) as top_rank
+from qbstats_2015_2016
+where year = 2016
+)
+select qb,game_points,top_rank
+from RankDB
+where top_rank <= 10
+order by top_rank;
+    
+Output:
+
+qb                                |  game_points  |  top_rank
+Drew BreesD. Brees                      49              1
+Matt RyanM. Ryan                        48              2
+Drew BreesD. Brees                      48              2
+Marcus MariotaM. Mariota                47              4
+Cam NewtonC. Newton                     46              5
+Matt RyanM. Ryan                        45              6
+Tyrod TaylorT. Taylor                    45              6
+Carson PalmerC. Palmer                  44              8
+Ben RoethlisbergerB. Roethlisberger      43              9
+Matt RyanM. Ryan                        43              9
+Philip RiversP. Rivers                  43              9
