@@ -1,0 +1,48 @@
+>.<
+
+Title: Find Olympics games that the youngest and the oldest athletes participated in the history of Olympics
+Link: https://platform.stratascratch.com/coding/9956-find-olympics-games-that-the-youngest-and-the-oldest-athletes-participated-in-the-history-of-olympics?code_type=3
+Level: Easy
+
+Find Olympics games that the youngest and the oldest athletes participated in the history of Olympics.
+Output all the details corresponding to each record.
+
+Data olympics_athletes_events:
+age: double
+city: text
+event: text
+games: text
+height: double
+id: bigint
+medal: text
+name: text
+noc: text
+season: text
+sex: text
+sport: text
+team: text
+weight: double
+year: bigint
+
+>.<
+
+Solution:
+
+select event, age
+from olympics_athletes_events
+where age = (
+select min(age)
+from olympics_athletes_events
+where age is not null
+)
+or age = (
+select max(age)
+from olympics_athletes_events
+where age is not null
+);
+    
+Output:
+
+event                                            |  age
+Athletics Men's 100 metres                          16
+Art Competitions Mixed Sculpturing Unknown Event    73
