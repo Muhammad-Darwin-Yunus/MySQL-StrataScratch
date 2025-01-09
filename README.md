@@ -73,3 +73,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 9972|[Find the base pay for Police Captains](https://platform.stratascratch.com/coding/9972-find-the-base-pay-for-police-captains?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209972)
 |ID 9969|[QBs With Most Interceptions](https://platform.stratascratch.com/coding/9969-qbs-with-most-interceptions?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209969)
 |ID 9963|[Top 10 QBs](https://platform.stratascratch.com/coding/9963-top-10-qbs?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209963)
+|ID 9962|[Quarterback Top Ratings](https://platform.stratascratch.com/coding/9962-top-10-qbs?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209962)
