@@ -19,17 +19,16 @@ month: datetime
 
 Solution:
 
-select seller_id,total_sales,product_category,market_place,month
+select seller_id,total_sales,product_category,market_place,sales_date,dense_rank() over(order by total_sales desc) as sales_rank
 from sales_data
-where month >= '2024-01' and month < '2024-02'
+where month(sales_date) = 1
 group by product_category
-order by total_sales desc;
+order by total_sales desc
+limit 3;
 
 Output:
 
-seller_id | total_sales | product_category | market_place | month
-s236          36486.73      electronics          in        2024-01
-s790          31050.13      clothing             in         2024-01
-s918          24286.4       books                uk         2024-01
-s272          11324.61      toys                 us         2024-01
-
+seller_id  |  total_sales  |  product_category  |  market_place  |  sales_date          |  sales_rank
+s236            36486.73        electronics              in        2024-01-01 00:00:00          1
+s790            31050.13        clothing                  in        2024-01-01 00:00:00          2
+s918            24286.4          books                  uk          2024-01-01 00:00:00          3
