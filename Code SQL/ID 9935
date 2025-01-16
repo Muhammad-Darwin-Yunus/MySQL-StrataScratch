@@ -1,0 +1,39 @@
+>.<
+
+Title: Find all events participated by Christine Jacoba Aaftink
+Link: https://platform.stratascratch.com/coding/9935-find-all-events-participated-by-christine-jacoba-aaftink?code_type=3
+Level: Easy
+
+Find all events participated by Christine Jacoba Aaftink.
+Output unique values only.
+
+Data olympics_athletes_events:
+age: double
+city: text
+event: text
+games: text
+height: double
+id: bigint
+medal: text
+name: text
+noc: text
+season: text
+sex: text
+sport: text
+team: text
+weight: double
+year: bigint
+
+>.<
+
+Solution:
+
+select distinct event
+from olympics_athletes_events
+where name = 'Christine Jacoba Aaftink';
+    
+Output:
+
+event
+Speed Skating Women's 500 metres
+Speed Skating Women's 1000 metres
