@@ -19,16 +19,14 @@ Solution:
 
 select project_id,avg(score)
 from project_data
-where team_member_id > 1
-group by project_id	;
+group by project_id
+having count(team_member_id) > 1;
 
 Output:
 
 project_id | avg(score)
-101            5.4
-102            3.12
-103            55.67
-104            5.2
-105            17.33
-106            7
-107            9
+101            5.33
+102            3
+103            56.82
+104            5.46
+105            14.25
