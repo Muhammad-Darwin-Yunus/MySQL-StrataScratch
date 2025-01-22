@@ -92,3 +92,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 9923|[100 Total Checkouts Libraries](https://platform.stratascratch.com/coding/9923-100-total-checkouts-libraries?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209923)
 |ID 9922|[Highest Checkouts](https://platform.stratascratch.com/coding/9922-highest-checkouts?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209922)
 |ID 9920|[Sales Dept Salaries](https://platform.stratascratch.com/coding/9920-sales-dept-salaries?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209920)
+|ID 9917|[Average Salaries](https://platform.stratascratch.com/coding/9917-average-salaries?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209917)
