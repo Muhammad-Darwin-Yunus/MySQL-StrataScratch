@@ -95,3 +95,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 9913|[Order Details](https://platform.stratascratch.com/coding/9913-order-details?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209913)
 |ID 9917|[Average Salaries](https://platform.stratascratch.com/coding/9917-average-salaries?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209917)
 |ID 9911|[Departments With 5 Employees](https://platform.stratascratch.com/coding/9911-departments-with-5-employees?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209911)
+|ID 9907|[Not Referred Employees](https://platform.stratascratch.com/coding/9907-not-referred-employees?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209907)
