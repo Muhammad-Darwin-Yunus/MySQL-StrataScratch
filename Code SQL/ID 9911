@@ -1,0 +1,37 @@
+>.<
+
+Title: Departments With 5 Employees
+Link: https://platform.stratascratch.com/coding/9911-departments-with-5-employees?code_type=3
+Level: Easy
+
+Find departments with at more than or equal 5 employees.
+
+Data employee:
+address: text
+age: bigint
+bonus: bigint
+city: text
+department: text
+email: text
+employee_title: text
+first_name: text
+id: bigint
+last_name: text
+manager_id: bigint
+salary: bigint
+sex: text
+target: bigint
+
+>.<
+
+Solution:
+
+select department,count(id) total_employees
+from employee
+group by department
+having count(id) >= 5;
+    
+Output:
+
+department  |  total_employees
+Sales              22
