@@ -1,0 +1,27 @@
+>.<
+
+Title: Highest Salary & Full Name
+Link: https://platform.stratascratch.com/coding/9866-highest-salary-and-full-name?code_type=3
+Level: Easy
+
+Your output should include the full name of the employee(s) with the highest salary in one column and the corresponding salary in the other.
+
+Data worker:
+department: text
+first_name: text
+joining_date: datetime
+last_name: text
+salary: bigint
+worker_id: bigint
+
+>.<
+
+Solution:
+
+select concat(first_name,last_name) fullname,max(salary) highest_salary
+from worker;
+    
+Output:
+
+fullname    |  highest_salary
+MonikaArora        500000
