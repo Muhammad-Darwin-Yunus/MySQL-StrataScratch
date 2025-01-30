@@ -18,17 +18,16 @@ worker_id: bigint
 
 Solution:
 
-select max(joining_date) joining_date
+select joining_date
 from worker
-group by joining_date
+order by joining_date desc
 limit 5;
     
 Output:
 
 joining_date
-2014-02-20 00:00:00
-2014-06-11 00:00:00
-2014-01-20 00:00:00
-2014-04-11 00:00:00
+2015-04-11 00:00:00
 2015-04-10 00:00:00
-MonikaArora        500000
+2014-06-11 00:00:00
+2014-06-11 00:00:00
+2014-06-11 00:00:00
