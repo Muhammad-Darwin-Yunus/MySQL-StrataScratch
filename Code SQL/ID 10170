@@ -27,12 +27,12 @@ no_show: varchar
 
 Solution:
 
-select gender,count(*) total_pertemuan
+select gender,count(*) total_appointments
 from medical_appointments
 group by gender;
 
 Output:
 
-gender | total_pertemuan
+gender | total_appointments
 M            42
 F            58
