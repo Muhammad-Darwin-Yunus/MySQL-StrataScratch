@@ -1,0 +1,30 @@
+>.<
+
+Title: Employees Who Joined in February 2014
+Link: https://platform.stratascratch.com/coding/9844-find-all-workers-who-joined-on-february-2014?code_type=3
+Level: Easy
+
+Find all workers who joined on February 2014.
+
+Data worker:
+department: text
+first_name: text
+joining_date: datetime
+last_name: text
+salary: bigint
+worker_id: bigint
+
+>.<
+
+Solution:
+
+select concat(first_name,' ',last_name) fullname
+from worker
+where month(joining_date) = 2 and year(joining_date) = 2014;
+    
+Output:
+
+fullname
+Monika Arora
+Vishal Singhal
+Amitah Singh
