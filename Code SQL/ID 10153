@@ -27,13 +27,18 @@ Solution:
 
 select business_id,name
 from yelp_business
-where categories like '%pizza' or 'pizza%' or '%_pizza' or 'pizza_%'
-or name like '%pizza' or 'pizza%' or '%_pizza' or 'pizza_%';
+where categories like '%pizza%' or categories like '%Pizza%';
 
 Output:
 
-business_id            | name
+business_id	name
 dRb2Xq8jorJV6tDCgmaQUg	Papa John's Pizza
 MYB1ZMspBk1Xc_awp_PtSw	Naked City Pizza Express
 XVDR44P_74FmA0ANanm4CQ	House of Pizza
+CV05rBOr5DdDGvxUZkRFmg	Angeline's
 EsE8KTPqAJ2MjJdmuAifRw	Dante's Inferno Flats
+YiaOpyu4qx0x1nJC_G33TQ	Grimaldi's Pizzeria
+xTW5PkLEdMBs2f2W8RGy0g	Miele's Italian and Banquet Hall
+2CQc-0KPuF2S8axUdGH24w	Punto fisso
+wk3wGDfJb1V-ciZpyhoNAA	Bic's Pub and Grill
+NBYN4Nks_EsPHyAlJ_mdNw	Bistro Merlot
