@@ -1,0 +1,39 @@
+>.<
+
+Title: Sort Workers in Ascending Order by First Name and Descending Order by Department
+Link: https://platform.stratascratch.com/coding/9836-sort-workers-in-ascending-order-by-the-first-name-and-in-descending-order-by-department-name?code_type=3
+Level: Easy
+
+Sort workers in ascending order by the first name and then in descending order by department name.
+
+Data worker:
+worker_id: bigint
+first_name: text
+last_name: text
+salary: bigint
+joining_date: datetime
+department: text
+
+>.<
+
+Solution:
+
+select concat(first_name,' ',last_name) fullname
+from worker
+order by first_name asc, department desc;
+    
+Output:
+
+fullname
+Agepi Argon
+Amitah Singh
+Geetika Chauhan
+Jai Patel
+Moe Acharya
+Monika Arora
+Nayah Laghari
+Niharika Verma
+Satish Kumar
+Vipul Diwan
+Vishal Singhal
+Vivek Bhati
