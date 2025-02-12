@@ -4,7 +4,7 @@ Title: Replace the letter 'a' with 'A' in the first name
 Link: https://platform.stratascratch.com/coding/9833-replace-the-letter-a-with-a-in-the-first-name?code_type=3
 Level: Easy
 
-Combine the first and last names of workers with a space in-between in a column 'full_name'.
+Replace the letter 'a' with 'A' in the first name.
 
 Data worker:
 worker_id: bigint
