@@ -1,0 +1,35 @@
+>.<
+
+Title: First Name with Left White Space Removed
+Link: https://platform.stratascratch.com/coding/9831-formatting-names?code_type=3
+Level: Easy
+
+Print the first name after removing white spaces from the left side.
+
+Data worker:
+worker_id: bigint
+first_name: text
+last_name: text
+salary: bigint
+joining_date: datetime
+department: text
+
+>.<
+
+Solution:
+
+select ltrim(first_name) first_name
+from worker_ws;
+    
+Output:
+
+first_name
+Monika 
+Niharika 
+Vishal 
+Amitah 
+Vivek 
+Vipul 
+Satish 
+Geetika 
+Agepi 
