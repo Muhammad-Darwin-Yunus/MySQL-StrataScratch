@@ -1,0 +1,28 @@
+>.<
+
+Title: Find business types present in the dataset
+Link: https://platform.stratascratch.com/coding/9808-find-business-types-present-in-the-dataset?code_type=3
+Level: Easy
+
+Find business types present in the dataset.
+
+Data google_adwords_earnings:
+business_type: text
+n_employees: bigint
+year: bigint
+adwords_earnings: bigint
+
+>.<
+
+Solution:
+
+select business_type
+from google_adwords_earnings
+group by business_type;
+    
+Output:
+
+business_type
+handyman
+media
+transport
