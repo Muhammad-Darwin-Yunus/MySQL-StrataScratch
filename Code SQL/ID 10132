@@ -4,7 +4,8 @@ Title: Highest Crime Rate
 Link: https://platform.stratascratch.com/coding/10132-highest-crime-rate?code_type=3
 Level: Easy
 
-Find employees who started in February and have odd-numbered employee IDs.
+Find the number of crime occurrences for each day of the week.
+Output the day alongside the corresponding crime count.
 
 Data sf_crime_incidents_2014_01:
 incidnt_num: float
