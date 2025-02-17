@@ -1,0 +1,26 @@
+>.<
+
+Title: Find all records with words that start with the letter 'g'
+Link: https://platform.stratascratch.com/coding/9806-find-all-records-with-words-that-start-with-the-letter-g?code_type=3
+Level: Easy
+
+Find all records with words that start with the letter 'g'.
+Output words1 and words2 if any of them satisfies the condition.
+
+Data google_word_lists:
+words1: text
+words2: text
+
+>.<
+
+Solution:
+
+select words1,words2
+from google_word_lists
+where words1 like 'g%' or words2 like 'g%' ;
+    
+Output:
+
+words1                    |  words2
+google,facebook,microsoft    flower,nature,sun
+sun,nature                    google,apple
