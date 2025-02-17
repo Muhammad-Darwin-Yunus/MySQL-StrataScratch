@@ -1,0 +1,25 @@
+>.<
+
+Title: Find drafts which contains the word 'optimism'
+Link: https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=3
+Level: Easy
+
+Find drafts which contains the word 'optimism'.
+
+Data google_file_store:
+filename: text
+contents:text
+
+>.<
+
+Solution:
+
+select filename
+from google_file_store
+where contents like '%optimism%';
+    
+Output:
+
+filename
+draft2.txt
+final.txt
