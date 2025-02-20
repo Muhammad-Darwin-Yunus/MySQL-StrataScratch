@@ -1,0 +1,27 @@
+>.<
+
+Title: User Scroll Up Events
+Link: https://platform.stratascratch.com/coding/9787-user-scroll-up-events?code_type=3
+Level: Easy
+
+Find all users that have performed at least one scroll_up event.
+
+Data facebook_web_log:
+user_id: bigint
+timestamp: timestamp
+action: text
+
+>.<
+
+Solution:
+
+select user_id
+from facebook_web_log
+where action = 'scroll_up';
+    
+Output:
+
+user_id
+0
+2
+1
