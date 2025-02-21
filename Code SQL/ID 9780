@@ -1,0 +1,30 @@
+>.<
+
+Title: Find the overall friend acceptance count for a given date
+Link: https://platform.stratascratch.com/coding/9780-find-the-overall-friend-acceptance-count-for-a-given-date?code_type=3
+Level: Easy
+
+Find the overall friend acceptance count for a given date.
+Assume the date is 2nd of January 2019.
+
+Data facebook_friendship_requests:
+sender: bigint
+receiver: bigint
+date_sent: datetime
+date_approved: datetime
+
+>.<
+
+Solution:
+
+select date_approved,count(receiver) overall_friend
+from facebook_friendship_requests
+where date_approved is not null
+group by date_approved;
+    
+Output:
+
+date_approved        |  overall_friend
+2019-02-02 00:00:00          1
+2019-03-02 00:00:00          1
+2019-01-02 00:00:00          2
