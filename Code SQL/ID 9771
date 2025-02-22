@@ -1,0 +1,29 @@
+>.<
+
+Title: Find all actions which occurred more than once in the weblog
+Link: https://platform.stratascratch.com/coding/9771-find-all-actions-which-occurred-more-than-once-in-the-weblog?code_type=3
+Level: Easy
+
+Find all actions which occurred more than once in the weblog.
+
+Data facebook_web_log:
+user_id: bigint
+timestamp: timestamp
+action:text
+
+>.<
+
+Solution:
+
+select action
+from facebook_web_log
+group by action
+having count(action) >1;
+    
+Output:
+
+action
+page_load
+scroll_down
+scroll_up
+page_exit
