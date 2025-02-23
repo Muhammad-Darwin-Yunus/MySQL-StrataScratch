@@ -1,0 +1,29 @@
+>.<
+
+Title: Find the number of views each post has
+Link: https://platform.stratascratch.com/coding/9770-find-the-number-of-views-each-post-has?code_type=3
+Level: Easy
+
+Find the number of views each post has.
+Output the post id along with the number of views.
+Order records by post id in ascending order.
+
+Data facebook_post_views:
+post_id: bigint
+viewer_id: bigint
+
+>.<
+
+Solution:
+
+select post_id,sum(viewer_id) total_views
+from facebook_post_views
+group by post_id
+order by post_id asc;
+    
+Output:
+
+post_id  |  total_views
+3              6
+4              3
+5              3
