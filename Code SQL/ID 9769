@@ -1,0 +1,33 @@
+>.<
+
+Title: Find all users who liked a post
+Link: https://platform.stratascratch.com/coding/9769-find-all-friends-who-liked-a-post?code_type=3
+Level: Easy
+
+Find all users who liked one or more posts
+
+Data facebook_reactions:
+poster: bigint
+friend: bigint
+reaction: text
+date_day: int
+post_id: bigint
+date_day: bigint
+
+>.<
+
+Solution:
+
+select distinct friend
+from facebook_reactions
+where reaction = 'like';
+    
+Output:
+
+friend
+1
+6
+2
+4
+3
+5
