@@ -1,0 +1,26 @@
+>.<
+
+Title: Find the complaint id for the processed complaints of type 1
+Link: https://platform.stratascratch.com/coding/9766-find-the-complaint-id-for-the-processed-complaints-of-type-1?code_type=3
+Level: Easy
+
+Find the complaint id for the processed complaints of type 1.
+
+Data facebook_complaints:
+complaint_id: bigint
+type: bigint
+processed: tinyint
+
+>.<
+
+Solution:
+
+select complaint_id
+from facebook_complaints
+where type = 1 and processed = 1;
+    
+Output:
+
+complaint_id
+3
+4
