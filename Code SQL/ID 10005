@@ -19,11 +19,10 @@ Solution:
 
 select hour as hour_gasoline_cost
 from lyft_rides
-group by hour
 order by gasoline_cost desc
 limit 1;
 
 Output:
 
 hour_gasoline_cost
-23
+10
