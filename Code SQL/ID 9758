@@ -1,0 +1,36 @@
+>.<
+
+Title: Find the best publishers based on total sales
+Link: https://platform.stratascratch.com/coding/9758-find-the-best-publishers-based-on-total-sales?code_type=3
+Level: Easy
+
+Find the best publishers based on total sales made by each publisher.
+Output publishers alongside their total sales.
+Order records based on the sales in descending order.
+
+Data global_weekly_charts_2013_2014:
+pos: bigint
+game: text
+platform: text
+publisher: text
+genre: text
+week: bigint
+weekly: bigint
+total: bigint
+week_ending: datetime
+id: bigint
+
+>.<
+
+Solution:
+
+select publisher,sum(total) total_sales
+from global_weekly_charts_2013_2014
+group by publisher
+order by total_sales desc
+limit 1;
+    
+Output:
+
+publisher        |  total_sales
+Electronic Arts      13775846
