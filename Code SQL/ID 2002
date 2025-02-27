@@ -1,0 +1,38 @@
+>.<
+
+Title: Submission Types
+Link: https://platform.stratascratch.com/coding/2002-submission-types?code_type=3
+Level: Easy
+
+Write a query that returns the user ID of all users that have created at least one ‘Refinance’ submission and at least one ‘InSchool’ submission.
+
+Data loans:
+id: bigint
+user_id: bigint
+created_at: datetime
+status: text
+type: text
+
+>.<
+
+Solution:
+
+select distinct loans.user_id
+from loans
+join (
+    select user_id
+    from loans
+    where type = 'Refinance')
+refinance
+    on loans.user_id = refinance.user_id
+join (
+    select user_id
+    from loans
+    where type = 'InSchool'
+) inschool
+    on loans.user_id = inschool.user_id;
+    
+Output:
+
+user_id
+108
