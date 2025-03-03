@@ -1,0 +1,29 @@
+>.<
+
+Title: Find the average number of streams across all songs
+Link: https://platform.stratascratch.com/coding/9996-find-the-average-number-of-streams-across-all-songs?code_type=3
+Level: Easy
+
+Find the average number of streams across all songs.
+
+Data spotify_worldwide_daily_song_ranking:
+artist: text
+date: datetime
+id: bigint
+position: bigint
+region: text
+streams bigint
+trackname: text
+url: text
+
+>.<
+
+Solution:
+
+select avg(streams) average_streams_songs
+from spotify_worldwide_daily_song_ranking;
+    
+Output:
+
+average_streams_songs
+421291.47
