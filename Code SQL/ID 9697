@@ -1,0 +1,43 @@
+>.<
+
+Title: BAKERY' Owned Facilities
+Link: https://platform.stratascratch.com/coding/9697-bakery-owned-facilities?code_type=3
+Level: Easy
+
+Find the owner_name and the pe_description of facilities owned by 'BAKERY' where low-risk cases have been reported.
+
+Data los_angeles_restaurant_health_inspections:
+serial_number: text
+activity_date: datetime
+facility_name: text
+score: bigint
+grade: text
+service_code: bigint
+service_description: text
+employee_id: text
+facility_address: text
+facility_city: text
+facility_id: text
+facility_state: text
+facility_zip: text
+owner_id: text
+owner_name: text
+pe_description: text
+program_element_pe: bigint
+program_name: text
+program_status: text
+record_id: text
+
+>.<
+
+Solution:
+
+select distinct owner_name,pe_description
+from los_angeles_restaurant_health_inspections
+where pe_description like '%LOW RISK%' and facility_name like '%%BAKERY';
+    
+Output:
+
+owner_name                |  pe_description
+DANNY'S BAKERY INC            FOOD MKT RETAIL (25-1,999 SF) LOW RISK
+GALDAZA FOOD CORPORATION      FOOD MKT RETAIL (25-1,999 SF) LOW RISK
