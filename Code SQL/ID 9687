@@ -1,0 +1,63 @@
+>.<
+
+Title: Find details of oscar winners between 2001 and 2009
+Link: https://platform.stratascratch.com/coding/9687-find-details-of-oscar-winners-between-2001-and-2009?code_type=3
+Level: Easy
+
+Find the details of oscar winners between 2001 and 2009.
+
+Data oscar_nominees:
+year: bigint
+category: text 
+nominee: text
+movie: text
+winner: tinyint
+id: bigint
+
+>.<
+
+Solution:
+
+select nominee
+from oscar_nominees
+where winner = 1 and year between 2001 and 2009;
+    
+Output:
+
+nominee
+Adrien Brody
+Alan Arkin
+Cate Blanchett
+Catherine Zeta-Jones
+Charlize Theron
+Chris Cooper
+Christoph Waltz
+Daniel Day-Lewis
+Denzel Washington
+Forest Whitaker
+George Clooney
+Halle Berry
+Heath Ledger
+Helen Mirren
+Hilary Swank
+Jamie Foxx
+Javier Bardem
+Jeff Bridges
+Jennifer Connelly
+Jennifer Hudson
+Jim Broadbent
+Kate Winslet
+Marion Cotillard
+Mo'Nique
+Morgan Freeman
+Nicole Kidman
+Pen_lope Cruz
+Philip Seymour Hoffman
+Rachel Weisz
+Reese Witherspoon
+Ren_e Zellweger
+Sandra Bullock
+Sean Penn
+Sean Penn
+Tilda Swinton
+Tim Robbins
