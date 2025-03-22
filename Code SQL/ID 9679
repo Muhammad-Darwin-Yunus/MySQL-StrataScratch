@@ -1,0 +1,34 @@
+>.<
+
+Title: Find the profit to sales ratio of Royal Dutch Shell
+Link: https://platform.stratascratch.com/coding/9679-find-the-profit-to-sales-ratio-of-royal-dutch-shell?code_type=3
+Level: Easy
+
+What is the profit to sales ratio (profit/sales) of Royal Dutch Shell?
+Output the result along with the company name.
+
+Data forbes_global_2010_2014:
+company: text
+sector: text
+industry: text
+continent: text
+country: text
+marketvalue: double
+sales: double
+profits: double
+assets: double
+rank: bigint
+forbeswebpage: text
+
+>.<
+
+Solution:
+
+select company,(profits / sales) profit_to_sales_ratio 
+from forbes_global_2010_2014
+where company = 'Royal Dutch Shell';
+    
+Output:
+
+company            |  profit_to_sales_ratio
+Royal Dutch Shell            0.04
