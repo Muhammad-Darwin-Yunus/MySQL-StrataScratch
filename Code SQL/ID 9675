@@ -1,0 +1,37 @@
+>.<
+
+Title: Flights With No Delay
+Link: https://platform.stratascratch.com/coding/9675-flights-with-no-delay?code_type=3
+Level: Easy
+
+Find all US flight details which had no delay (use only arr_delay column for filtering).
+
+Data us_flights:
+flight_date: datetime
+unique_carrier: text
+flight_num: bigint
+origin: text
+dest: text
+arr_delay: double
+cancelled: bigint
+distance: double
+carier_delay: double
+weather_delay: double
+late_aircraft_delay: double
+nas_delay: double
+security_delay: double
+actual_elapsed_time: double
+
+>.<
+
+Solution:
+
+select unique_carrier
+from us_flights
+where arr_delay = 0;
+    
+Output:
+
+unique_carrier
+OO
+EV
