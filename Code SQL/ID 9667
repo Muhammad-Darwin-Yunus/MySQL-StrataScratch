@@ -1,0 +1,33 @@
+>.<
+
+Title: Count users that speak English, German, French or Spanish
+Link: https://platform.stratascratch.com/coding/9667-count-users-that-speak-english-german-french-or-spanish?code_type=3
+Level: Easy
+
+How many users speak English, German, French or Spanish?
+Note: Users who speak more than one language are counted only once.
+
+Data playbook_users:
+activated_at: datetime
+company_id: bigint
+created_at: timestamp
+language: text
+state: text
+user_id: bigint
+
+>.<
+
+Solution:
+
+select count(distinct user_id) total_users,language
+from playbook_users
+where language in ('english','german','french','spanish')
+group by language;
+    
+Output:
+
+total_users	language
+109	english
+12	french
+11	german
+29	spanish
