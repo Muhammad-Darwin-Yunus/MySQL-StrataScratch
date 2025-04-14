@@ -1,0 +1,34 @@
+>.<
+
+Title: Find the industry which has the lowest average sales compared to all industries
+Link: https://platform.stratascratch.com/coding/9666-find-the-industry-which-has-the-lowest-sales-compared-to-all-industries?code_type=3
+Level: Easy
+
+Find the industry with lowest average sales. Output that industry.
+
+Data forbes_global_2010_2014:
+assets: double
+company: text
+continent: text
+country: text
+industry: text
+marketvalue: double
+profits: double
+rank: bigint
+sales: double
+sector: text
+
+>.<
+
+Solution:
+
+select industry
+from forbes_global_2010_2014
+group by industry
+order by avg(sales) asc
+limit 1;
+    
+Output:
+
+industry
+Communications Equipment
