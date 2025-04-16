@@ -1,0 +1,29 @@
+>.<
+
+Title: Number of Hires During Specific Time Period
+Link: https://platform.stratascratch.com/coding/2151-number-of-hires-during-specific-time-period?code_type=3
+Level: Easy
+
+You have been asked to find the number of employees hired between the months of January and July in the year 2022 inclusive.
+Your output should contain the number of employees hired in this given time frame.
+
+Data employees:
+department: text
+first_name: text
+id: bigint
+joining_date: date
+last_name: text
+salary: bigint
+
+>.<
+
+Solution:
+
+select count(*) number_of_employees
+from employees
+where joining_date between '2022-01-01' and '2022-07-31';
+    
+Output:
+
+number_of_employees
+3
