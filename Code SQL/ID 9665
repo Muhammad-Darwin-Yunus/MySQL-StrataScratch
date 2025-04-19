@@ -1,0 +1,53 @@
+>.<
+
+Title: Count the number of companies in the IT sector in each country
+Link: https://platform.stratascratch.com/coding/9665-count-the-number-of-companies-in-the-it-sector-in-each-country?code_type=3
+Level: Easy
+
+Count the number of companies in the Information Technology sector in each country.
+Output the result along with the corresponding country name.
+Order the result based on the number of companies in the descending order.
+
+Data forbes_global_2010_2014:
+assets: double
+company: text
+continent: text
+country: text
+industry: text
+marketvalue: double
+profits: double
+rank: bigint
+sales: double
+sector: text
+
+>.<
+
+Solution:
+
+select count(sector) number_of_companies_IT,country
+from forbes_global_2010_2014
+group by country
+order by number_of_companies_IT desc;
+    
+Output:
+
+number_of_companies_IT  |  country
+38                          United States
+10                          China
+7                            France
+7                            Germany
+6                            Japan
+5                            Switzerland
+5                            Australia
+4                            United Kingdom
+4                            Russia
+3                            Brazil
+3                            Canada
+2                            South Korea
+2                            Netherlands
+2                            Italy
+2                            Spain
+1                            Saudi Arabia
+1                            Belgium
+1                            Norway
+1                            Hong Kong
