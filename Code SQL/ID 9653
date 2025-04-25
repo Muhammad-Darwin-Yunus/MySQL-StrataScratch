@@ -1,0 +1,37 @@
+>.<
+
+Title: MacBookPro User Event Count
+Link: https://platform.stratascratch.com/coding/9653-count-the-number-of-user-events-performed-by-macbookpro-users?code_type=3
+Level: Easy
+
+Count the number of user events performed by MacBookPro users.
+Output the result along with the event name.
+Sort the result based on the event count in the descending order.
+
+Data playbook_events:
+user_id: bigint
+occurred_at: timestamp
+event_type: text
+event_name: text
+location: text
+device: text
+
+>.<
+
+Solution:
+
+select event_name,count(user_id) event_count
+from playbook_events
+where device = 'macbook pro'
+group by event_name
+order by event_count desc;
+    
+Output:
+
+event_name          |  event_count
+home_page                  8
+view_inbox                  3
+login                      3
+search_autocomplete        3
+like_message                3
+send_message                1
