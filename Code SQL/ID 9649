@@ -1,0 +1,25 @@
+>.<
+
+Title: Count the number of accounts used for logins in 2016
+Link: https://platform.stratascratch.com/coding/9649-count-the-number-of-accounts-used-for-logins-in-2016?code_type=3
+Level: Easy
+
+How many accounts have performed a login in the year 2016?
+
+Data product_logins:
+account_id: bigint
+employer_key: text
+login_date: date
+
+>.<
+
+Solution:
+
+select count(distinct account_id) number_of_accounts_2016
+from product_logins
+where year(login_date) = 2016;
+    
+Output:
+
+number_of_accounts_2016
+73
