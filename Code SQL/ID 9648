@@ -1,0 +1,48 @@
+>.<
+
+Title: Drafted Into NFL
+Link: https://platform.stratascratch.com/coding/9648-drafted-into-nfl?code_type=3
+Level: Easy
+
+How many athletes were drafted into NFL from 2013 NFL Combine?
+The pickround column specifies if the athlete was drafted into the NFL.
+A value of 0 means that the athlete was not drafted into the NFL.
+
+Data nfl_combine:
+year: bigint
+name: text
+firstname: text
+lastname: text
+position: text
+heightfeet: bigint
+heightinches: double
+heightinchestotal: double
+weight: bigint
+arms: double
+hands: double
+fortyyd: double
+twentyyd: double
+tenyd: double
+twentyss: double
+threecone: double
+vertical: double
+broad: bigint
+bench: bigint
+round: bigint
+college: text
+pick: text
+pickround: bigint
+picktotal: bigint
+
+>.<
+
+Solution:
+
+select count(name) drafted_NFL_2013
+from nfl_combine
+where year = 2013 and pickround != 0;
+    
+Output:
+
+drafted_NFL_2013
+26
