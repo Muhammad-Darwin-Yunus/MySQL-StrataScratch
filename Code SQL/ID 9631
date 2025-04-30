@@ -1,0 +1,43 @@
+>.<
+
+Title: Find neighborhoods that have properties with a parking space and no cleaning fees
+Link: https://platform.stratascratch.com/coding/9631-find-neighborhoods-that-have-properties-with-a-parking-space-and-no-cleaning-fees?code_type=3
+Level: Easy
+
+Find all neighborhoods that have properties with a parking space and don't charge for cleaning fees.
+
+Data airbnb_searches:
+ds: date
+id_user: text
+ds_checkin: date
+ds_checkout: date
+n_searches: bigint
+n_nights: double
+n_guests_min: bigint
+n_guests_max: bigint
+origin_country: text
+filter_price_min: double
+filter_price_max: double
+filter_room_types: text
+filter_neighborhoods: text
+
+>.<
+
+Solution:
+
+select distinct neighbourhood
+from airbnb_search_details
+where cleaning_fee = 0 and amenities like '%Parking%' and neighbourhood is not null;
+    
+Output:
+
+neighbourhood
+Santa Monica
+Studio City
+Long Beach
+Harlem
+Mount Washington
+Westlake
+Williamsburg
+Reseda
+Culver City
