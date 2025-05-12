@@ -1,0 +1,31 @@
+>.<
+
+Title: Find the date with the highest opening stock price
+Link: https://platform.stratascratch.com/coding/9613-find-the-date-with-the-highest-opening-stock-price?code_type=3
+Level: Easy
+
+Find the date when Apple's opening stock price reached its maximum
+
+Data aapl_historical_stock_price:
+date: date
+year: bigint
+month: bigint
+open: double
+high: double
+low: double
+close: double
+volume: bigint
+id: bigint
+
+>.<
+
+Solution:
+
+select date
+from aapl_historical_stock_price
+having max(open);
+    
+Output:
+
+date
+2012-12-31
