@@ -1,0 +1,35 @@
+>.<
+
+Title: Third Heaviest Shipment
+Link: https://platform.stratascratch.com/coding/2142-third-heaviest-package?code_type=3
+Level: Easy
+
+You've been asked by Amazon to find the shipment_id and weight of the third heaviest shipment.
+Output the shipment_id, and total_weight for that shipment_id.
+In the event of a tie, do not skip ranks.
+
+Data amazon_shipment:
+shipment_id: bigint
+sub_id: bigint
+weight: bigint
+shipment_date: date
+
+>.<
+
+Solution:
+
+with ShipWeight as (
+select shipment_id,sum(weight) total_weight , dense_rank() over (order by sum(weight) desc) as `rank`
+from amazon_shipment
+group by shipment_id
+)
+
+select shipment_id,total_weight 
+from ShipWeight
+where `rank` = 3;
+    
+Output:
+
+shipment_id  |  total_weight
+101                  40
+104                  40
