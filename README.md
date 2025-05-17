@@ -211,3 +211,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 9602|[Dirty Hotel Rooms](https://platform.stratascratch.com/coding/9602-dirty-hotel-rooms?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209602)
 |ID 9598|[Find non-HS SAT scores](https://platform.stratascratch.com/coding/9598-find-non-hs-sat-scores?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%209598)
 |ID 2142|[Third Heaviest Shipment](https://platform.stratascratch.com/coding/2142-third-heaviest-package?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202142)
+|ID 2166|[Sorting By Second Character](https://platform.stratascratch.com/coding/2166-sorting-by-second-character?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202166)
