@@ -1,0 +1,40 @@
+>.<
+
+Title: Oregon's Prior Month's Sales
+Link: https://platform.stratascratch.com/coding/2160-oregons-prior-months-sales?code_type=3
+Level: Easy
+
+The sales division is investigating their sales for the past month in Oregon.
+Calculate the total revenue generated from Oregon-based customers for April 2022.
+
+Data online_orders:
+product_id: bigint
+promotion_id: bigint
+cost_in_dollars: bigint
+customer_id: bigint
+date_sold: date
+units_sold: bigint
+
+Data online_customers:
+id: bigint
+first_name: text
+last_name: text
+age: bigint
+email: text
+state: text
+address: text
+
+>.<
+
+Solution:
+
+select oc.state, sum(oo.cost_in_dollars * oo.units_sold) total_revenue
+from online_orders oo
+inner join online_customers oc on oo.customer_id = oc.id
+where oc.state = 'Oregon' and year(date_sold) = 2022 and month(date_sold) = 4
+group by oc.state;
+    
+Output:
+
+state  |  total_revenue
+Oregon        266
