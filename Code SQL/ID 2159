@@ -1,0 +1,77 @@
+>.<
+
+Title: April & May Sign Up's
+Link: https://platform.stratascratch.com/coding/10000-find-the-year-that-uber-acquired-more-than-2000-customers-through-celebrities?code_type=3
+Level: Easy
+
+You have been asked to get a list of all the sign up IDs with transaction start dates in either April or May.
+Since a sign up ID can be used for multiple transactions only output the unique ID.
+Your output should contain a list of non duplicated sign-up IDs.
+
+Data transactions:
+transaction_id: bigint
+signup_id: bigint
+transaction_start_date: date
+amt: double
+
+>.<
+
+Solution:
+
+select distinct signup_id
+from transactions
+where month(transaction_start_date) = 4 or month(transaction_start_date) = 5;
+    
+Output:
+
+signup_id
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
