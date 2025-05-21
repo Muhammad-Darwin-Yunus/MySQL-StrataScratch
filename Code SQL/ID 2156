@@ -1,0 +1,35 @@
+>.<
+
+Title: Unique Employee Logins
+Link: https://platform.stratascratch.com/coding/2156-unique-employee-logins?code_type=3
+Level: Easy
+
+You have been tasked with finding the worker IDs of individuals who logged in between the 13th to the 19th inclusive of December 2021.
+In your output, provide the unique worker IDs for the dates requested.
+
+Data worker_logins:
+id: bigint
+worker_id: bigint
+login_timestamp: timestamp
+ip_address: text
+country: text
+region: text
+city: text
+device_type: text
+
+>.<
+
+Solution:
+
+select distinct id
+from worker_logins
+where year(login_timestamp) = 2021 and month(login_timestamp) = 12 and day(login_timestamp) between 13 and 19;
+    
+Output:
+
+id
+0
+1
+2
+3
+10
