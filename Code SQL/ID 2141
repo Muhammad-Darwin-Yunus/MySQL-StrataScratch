@@ -1,0 +1,31 @@
+>.<
+
+Title: Most Recent Employee Login Details
+Link: https://platform.stratascratch.com/coding/2141-most-recent-employee-login-details?code_type=3
+Level: Easy
+
+Amazon's information technology department is looking for information on employees' most recent logins.
+The output should include all information related to each employee's most recent login.
+
+Data worker_logins:
+id: bigint
+worker_id: bigint
+login_timestamp: timestamp
+ip_address: text
+country: text
+region: text
+city: text
+device_type: text
+
+>.<
+
+Solution:
+
+select *
+from worker_logins
+where login_timestamp = (select max(login_timestamp) from worker_logins);
+    
+Output:
+
+id  |  worker_id  |  login_timestamp      |  ip_address    |  country  |  region  |  city  |  device_type
+19        7          2022-01-26 10:55:00    212.102.111.33      Spain    Valencia    Sueca    mobile
