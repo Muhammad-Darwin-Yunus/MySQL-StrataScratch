@@ -219,3 +219,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 2141|[Most Recent Employee Login Details](https://platform.stratascratch.com/coding/2141-most-recent-employee-login-details?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202141)
 |ID 2129|[Post Likes](https://platform.stratascratch.com/coding/2129-post-likes?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202129)
 |ID 2127|[Sales Revenue](https://platform.stratascratch.com/coding/2127-sales-revenue?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202127)
+|ID 2126|[Account Registrations](https://platform.stratascratch.com/coding/2126-account-registrations?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202126)
