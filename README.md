@@ -223,3 +223,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 2119|[Most Lucrative Products](https://platform.stratascratch.com/coding/2119-most-lucrative-products?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202119)
 |ID 2116|[Shipped by Speedy Express](https://platform.stratascratch.com/coding/2116-shipped-by-speedy-express?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202116)
 |ID 2109|[Products with No Sales](https://platform.stratascratch.com/coding/2109-products-with-no-sales?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202109)
+|ID 2107|[Primary Key Violation](https://platform.stratascratch.com/coding/2107-primary-key-violation?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202107)
