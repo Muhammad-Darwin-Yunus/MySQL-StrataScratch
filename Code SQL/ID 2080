@@ -1,0 +1,32 @@
+>.<
+
+Title: Mobile and Web Logins
+Link: https://platform.stratascratch.com/coding/2080-mobile-and-web-logins?code_type=3
+Level: Easy
+
+Count the number of unique users per day who logged in from both a mobile device and web.
+Output the date and the corresponding number of users.
+
+Data mobile_logs:
+log_date: date
+user_id: text
+
+Data web_logs:
+log_date: date
+user_id: text
+
+>.<
+
+Solution:
+
+select count(distinct ml.user_id) as total_user, ml.log_date
+from mobile_logs ml
+inner join web_logs wl on ml.user_id = wl.user_id and ml.log_date = wl.log_date
+group by ml.log_date;
+    
+Output:
+
+total_user  |  log_date
+3              2021-11-01
+2              2021-11-02
+1              2021-11-03
