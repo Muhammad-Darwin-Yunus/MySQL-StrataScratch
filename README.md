@@ -227,3 +227,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 2100|[Salary by Education](https://platform.stratascratch.com/coding/2100-salary-by-education?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202100)
 |ID 2091|[Latest Login Date](https://platform.stratascratch.com/coding/2091-latest-login-date?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202091)
 |ID 2083|[Pending Claims](https://platform.stratascratch.com/coding/2083-pending-claims?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202083)
+|ID 2080|[Mobile and Web Logins](https://platform.stratascratch.com/coding/2080-mobile-and-web-logins?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202080)
