@@ -1,0 +1,32 @@
+>.<
+
+Title: Active Users Per Platform
+Link: https://platform.stratascratch.com/coding/2072-active-users-per-platform?code_type=3
+Level: Easy
+
+For each platform (e.g. Windows, iPhone, iPad etc.), calculate the number of users.
+Consider unique users and not individual sessions.
+Output the name of the platform with the corresponding number of users.
+
+Data user_sessions:
+platform: text
+session_endtime: timestamp
+session_id: bigint
+session_starttime: timestamp
+user_id: text
+
+>.<
+
+Solution:
+
+select platform,count(distinct user_id) total_user
+from user_sessions
+group by platform;
+    
+Output:
+
+platform  |  total_user
+Android        1
+IPad          1
+IPhone        2
+Windows        4
