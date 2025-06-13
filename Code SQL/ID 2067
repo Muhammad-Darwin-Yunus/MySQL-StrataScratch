@@ -1,0 +1,28 @@
+>.<
+
+Title: Low Fat and Recyclable
+Link: https://platform.stratascratch.com/coding/2067-low-fat-and-recyclable?code_type=3
+Level: Easy
+
+What percentage of all products are both low fat and recyclable?
+
+Data facebook_products:
+brand_name: text
+is_low_fat: text
+is_recyclable: text
+product_category: bigint
+product_class: text
+product_family: text
+product_id: bigint
+
+>.<
+
+Solution:
+
+select round(100.0 * sum(case when is_low_fat = 'Y' and is_recyclable = 'Y' then 1 else 0 end) / count(*),2) as percentage_product
+from facebook_products;
+    
+Output:
+
+percentage_product
+8.33
