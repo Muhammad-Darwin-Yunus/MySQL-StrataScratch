@@ -1,0 +1,39 @@
+>.<
+
+Title: Change of Currency Exchange Rates
+Link: https://platform.stratascratch.com/coding/2063-change-of-currency-exchange-rates?code_type=3
+Level: Easy
+
+Find the year that Uber acquired more than 2000 customers through advertising using celebrities.
+
+Data sf_exchange_rate:
+date: date
+exchange_rate: double
+source_currency: text
+target_currency: text
+
+>.<
+
+Solution:
+
+select e1.source_currency,e2.date - e1.date as difference
+from sf_exchange_rate e1
+join sf_exchange_rate e2 on e1.source_currency = e2.source_currency and e1.target_currency = e2.target_currency
+where e1.target_currency = 'USD' and e1.date = '2020-01-01' and e2.date = '2020=07-01';
+    
+Output:
+
+source_currency  |  difference
+USD                  600
+EUR                  600
+GBP                  600
+INR                  600
+AUD                  600
+CAD                  600
+CHF                  600
+AED                  600
+SEK                  600
+EGP                  600
+KWD                  600
+PLN                  600
+UAH                  600
