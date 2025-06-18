@@ -1,0 +1,36 @@
+>.<
+
+Title: Find the top-ranked songs for the past 20 years
+Link: https://platform.stratascratch.com/coding/10283-find-the-top-ranked-songs-for-the-past-30-years?code_type=3
+Level: Easy
+
+Find all the songs that were top-ranked (at first position) at least once since the year 2005.
+
+Data billboard_top_100_year_end:
+artist: text
+group_name: text
+id: bigint
+song_name: text
+year: bigint
+year_rank: bigint
+
+>.<
+
+Solution:
+
+select distinct song_name
+from billboard_top_100_year_end
+where year >= 2005 and year_rank = 1;
+    
+Output:
+
+song_name
+We Belong Together
+Bad Day
+Irreplaceable
+Low
+Boom Boom Pow
+TiK ToK
+Rolling In The Deep
+Somebody That I Used To Know
+Thrift Shop
