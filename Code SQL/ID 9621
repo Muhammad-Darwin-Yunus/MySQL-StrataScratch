@@ -1,0 +1,44 @@
+>.<
+
+Title: Find all searches for San Francisco with a flexible cancellation policy and a review score rating
+Link: https://platform.stratascratch.com/coding/9621-find-all-searches-for-san-francisco-with-a-flexible-cancellation-policy-and-a-review-score-rating?code_type=3
+Level: Easy
+
+Find all searches for San Francisco with a flexible cancellation policy and a review score rating.
+Sort the results by the review score in the descending order.
+
+Data airbnb_search_details:
+accommodates: bigint
+amenities: text
+bathrooms: bigint
+bed_type: text
+bedrooms: bigint
+beds: bigint
+cancellation_policy: text
+city: text
+cleaning_fee: tinyint
+host_identity_verified: text
+host_response_rate: text
+host_since: date
+id: bigint
+neighbourhood: text
+number_of_reviews: bigint
+price: double
+property_type: text
+review_scores_rating: double
+room_type: text
+zipcode: bigint
+
+>.<
+
+Solution:
+
+select review_scores_rating
+from airbnb_search_details
+where cancellation_policy = 'flexible' and city = 'SF'
+order by review_scores_rating desc;
+    
+Output:
+
+review_scores_rating
+100
