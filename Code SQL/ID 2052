@@ -1,0 +1,45 @@
+>.<
+
+Title: User Growth Rate
+Link: https://platform.stratascratch.com/coding/2052-user-growth-rate?code_type=3
+Level: Easy
+
+Find the growth rate of active users for Dec 2020 to Jan 2021 for each account.
+The growth rate is defined as the number of users in January 2021 divided by the number of users in Dec 2020.
+Output the account_id and growth rate.
+
+Data sf_events:
+account_id: text
+record_date: date
+user_id: text
+
+>.<
+
+Solution:
+
+with monthly_active_user as(
+select account_id, date_format(record_date,'%Y-%m-01') as month, count(distinct user_id) as user_active
+from sf_events
+where record_date between '2020-12-01' and '2021-01-31'
+group by account_id,date_format(record_date,'%Y-%m-01')
+),
+dec_users as(
+select account_id, user_active as user_active_dec
+from monthly_active_user
+where month = '2020-12-01'
+),
+jan_users as(
+select account_id, user_active as user_active_jan
+from monthly_active_user
+where month = '2021-01-01'
+)
+select j.account_id, round(1.0 * j.user_active_jan / d.user_active_dec,2) as growth_rate
+from jan_users j
+join dec_users d on j.account_id = d.account_id;
+    
+Output:
+
+account_id  |  growth_rate
+A1                1
+A2                2
+A3                0.5
