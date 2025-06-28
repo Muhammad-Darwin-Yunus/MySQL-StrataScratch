@@ -242,3 +242,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 2057|[Weight For First Shipment](https://platform.stratascratch.com/coding/2057-weight-for-first-shipment?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202057)
 |ID 2056|[Number of Shipments Per Month](https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202056)
 |ID 2052|[User Growth Rate](https://platform.stratascratch.com/coding/2052-user-growth-rate?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202052)
+|ID 2051|[Monthly Active Users](https://platform.stratascratch.com/coding/2051-monthly-active-users?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202051)
