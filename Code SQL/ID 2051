@@ -1,0 +1,29 @@
+>.<
+
+Title: Monthly Active Users
+Link: https://platform.stratascratch.com/coding/2051-monthly-active-users?code_type=3
+Level: Easy
+
+Find the monthly active users for January 2021 for each account.
+Your output should have account_id and the monthly count for that account.
+
+Data sf_events:
+account_id: text
+record_date: date
+user_id: text
+
+>.<
+
+Solution:
+
+select account_id,count(user_id) active_users
+from sf_events
+where year(record_date) = 2021 and month(record_date) =1
+group by account_id;
+    
+Output:
+
+account_id  |  active_users
+A1                  4
+A2                  4
+A3                  1
