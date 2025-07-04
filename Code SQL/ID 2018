@@ -1,0 +1,38 @@
+>.<
+
+Title: Inactive Free Users
+Link: https://platform.stratascratch.com/coding/2018-inactive-free-users?code_type=3
+Level: Easy
+
+Return a list of users with status free who didn’t make any calls in Apr 2020.
+
+Data rc_calls:
+call_date: datetime
+call_id: bigint
+user_id: bigint
+
+Data rc_users:
+company_id: bigint
+status: text
+user_id: bigint
+
+>.<
+
+Solution:
+
+select c.user_id
+from rc_calls c
+left join rc_users u on c.user_id = u.user_id
+where u.status = 'free' and month(c.call_date) = 4 and year(c.call_date) = 2020;
+    
+Output:
+
+user_id
+1218
+1950
+1339
+1859
+1884
+1859
+1859
+1857
