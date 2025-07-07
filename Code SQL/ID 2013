@@ -1,0 +1,33 @@
+>.<
+
+Title: Customer Average Orders
+Link: https://platform.stratascratch.com/coding/2013-customer-average-orders?code_type=3
+Level: Easy
+
+How many customers placed an order and what is the average order amount?
+
+Data postmates_orders:
+amount: double
+city_id: bigint
+courier_id: bigint
+customer_id: bigint
+id: bigint
+order_timestamp_utc: timestamp
+seller_id: bigint
+
+>.<
+
+Solution:
+
+select customer_id,sum(amount) total_order, avg(amount) avg_order
+from postmates_orders
+group by customer_id;
+    
+Output:
+
+customer_id	total_order	avg_order
+102	657.65	131.53
+104	725.87	181.47
+100	600.08	150.02
+101	477.58	119.39
+103	323.31	107.77
