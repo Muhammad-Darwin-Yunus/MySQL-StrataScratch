@@ -1,0 +1,28 @@
+>.<
+
+Title: Session Type Duration
+Link: https://platform.stratascratch.com/coding/2011-session-type-duration?code_type=3
+Level: Easy
+
+Calculate the average session duration (in seconds) for each session type?
+
+Data twitch_sessions:
+session_end: varchar
+session_id: int
+session_start: varchar
+session_type: varchar
+user_id: varchar
+
+>.<
+
+Solution:
+
+select session_type,avg(timestampdiff(second,session_start,session_end)) as session_duration_seconds
+from twitch_sessions
+group by session_type;
+    
+Output:
+
+session_type	session_duration_seconds
+streamer	1310.82
+viewer	1908
