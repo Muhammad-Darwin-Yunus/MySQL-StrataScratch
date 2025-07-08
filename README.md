@@ -250,3 +250,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 2018|[Inactive Free Users](https://platform.stratascratch.com/coding/2018-inactive-free-users?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202018)
 |ID 2017|[Paid Users In April 2020](https://platform.stratascratch.com/coding/2017-paid-users-in-april-2020?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202017)
 |ID 2013|[Customer Average Orders](https://platform.stratascratch.com/coding/2013-customer-average-orders?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202013)
+|ID 2011|[Session Type Duration](https://platform.stratascratch.com/coding/2011-session-type-duration?code_type=3)|Easy|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%202011)
