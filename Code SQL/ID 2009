@@ -1,0 +1,33 @@
+>.<
+
+Title: Users With Two Statuses
+Link: https://platform.stratascratch.com/coding/2009-users-with-two-statuses?code_type=3
+Level: Easy
+
+Find users who are both a viewer and streamer.
+
+Data twitch_sessions:
+session_end: varchar
+session_id: int
+session_start: varchar
+session_type: varchar
+user_id: varchar
+
+>.<
+
+Solution:
+
+select user_id
+from twitch_sessions
+group by user_id
+having count(distinct session_type) = 2;
+    
+Output:
+
+user_id
+0
+1
+2
+3
+6
+7
