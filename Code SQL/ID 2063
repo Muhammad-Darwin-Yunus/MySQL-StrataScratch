@@ -16,24 +16,24 @@ target_currency: text
 
 Solution:
 
-select e1.source_currency,e2.date - e1.date as difference
+select e1.source_currency,datediff(e2.date, e1.date) difference
 from sf_exchange_rate e1
-join sf_exchange_rate e2 on e1.source_currency = e2.source_currency and e1.target_currency = e2.target_currency
-where e1.target_currency = 'USD' and e1.date = '2020-01-01' and e2.date = '2020=07-01';
+join sf_exchange_rate e2 on e1.source_currency = e1.source_currency and e1.target_currency = e2.target_currency
+where e1.target_currency = 'USD' and e1.date = '2020-01-01' and e2.date = '2020-07-01';
     
 Output:
 
-source_currency  |  difference
-USD                  600
-EUR                  600
-GBP                  600
-INR                  600
-AUD                  600
-CAD                  600
-CHF                  600
-AED                  600
-SEK                  600
-EGP                  600
-KWD                  600
-PLN                  600
-UAH                  600
+source_currency	difference
+USD	182
+EUR	182
+GBP	182
+INR	182
+AUD	182
+CAD	182
+CHF	182
+AED	182
+SEK	182
+EGP	182
+KWD	182
+PLN	182
+UAH	182
