@@ -1,0 +1,93 @@
+>.<
+
+Title: Car Part Price
+Link: https://platform.stratascratch.com/coding/10570-car-part-price?code_type=3
+Level: Medium
+
+An automotive parts supplier maintains a database of car part prices across different model years.
+As parts are redesigned or manufacturing costs change, prices fluctuate from year to year.
+The procurement team needs to analyze these price trends to identify which parts have seen the most significant price increases or decreases.
+
+Calculate the price change for each car part compared to its previous model year.
+The price change should show the difference in dollars (current price minus previous price).
+For the first occurrence of each part, the price change should be NULL since there's no prior data to compare against.
+Return all columns from the original table plus a column showing the change from the previous model year.
+
+If the dataset contains duplicates, remove them before calculating price changes, keeping only one entry per unique car_part_id, model_year combination.
+Note that some parts may have gaps in their model year sequences.
+In these cases, calculate the price change against whichever entry comes immediately before in the dataset, regardless of how many years have passed.
+
+Data car_parts:
+car_part_id: text
+model_year: bigint
+price: double
+
+>.<
+
+Solution:
+
+with dedup as (
+select car_part_id, model_year, price, row_number() over (partition by car_part_id, model_year order by car_part_id) as rn
+from car_parts
+),
+clean_data as (
+select car_part_id, model_year, price
+from dedup
+where rn = 1
+),
+price_changes as (
+select car_part_id, model_year, price, price - lag(price) over(partition by car_part_id order by model_year) as price_change
+from clean_data
+)
+select car_part_id, model_year, price, price_change
+from price_changes
+order by car_part_id, model_year;
+    
+Output:
+
+car_part_id	model_year	price	price_change
+AF-4421	2023	34.99	
+AF-4421	2024	34.99	0
+AF-4421	2025	36.25	1.26
+BP-2401	2022	45.99	
+BP-2401	2023	48.5	2.51
+BP-2401	2024	48.5	0
+BP-2401	2025	52	3.5
+BR-8845	2022	210.5	
+BR-8845	2023	215	4.5
+BR-8845	2024	220.75	5.75
+BR-8845	2025	228.5	7.75
+CV-6678	2023	155	
+CV-6678	2025	168.5	13.5
+DF-1267	2022	185	
+DF-1267	2023	189.5	4.5
+DF-1267	2024	195	5.5
+DF-1267	2025	202.75	7.75
+FS-4401	2022	22.5	
+FS-4401	2023	23.75	1.25
+FS-4401	2024	25	1.25
+FS-4401	2025	26.5	1.5
+IG-9934	2024	95	
+IG-9934	2025	98.75	3.75
+OF-1823	2022	12.99	
+OF-1823	2023	14.5	1.51
+OF-1823	2025	18.75	4.25
+RP-3321	2022	78.99	
+RP-3321	2023	76.5	-2.49
+RP-3321	2024	74	-2.5
+SP-9012	2022	89.99	
+SP-9012	2023	92.5	2.51
+SP-9012	2024	95	2.5
+SP-9012	2025	98.5	3.5
+ST-2109	2022	67.5	
+ST-2109	2024	72	4.5
+ST-2109	2025	74.25	2.25
+TB-8802	2023	42	
+TB-8802	2024	44.5	2.5
+TB-8802	2025	47.25	2.75
+TF-3390	2024	45	
+TF-3390	2025	48.99	3.99
+WP-7734	2022	125	
+WP-7734	2023	129.99	4.99
+WP-7734	2024	135.5	5.51
+WP-7734	2025	138	2.5
