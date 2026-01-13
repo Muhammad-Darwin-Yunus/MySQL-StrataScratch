@@ -1,0 +1,44 @@
+>.<
+
+Title: VR App Sessions
+Link: https://platform.stratascratch.com/coding/10569-vr-app-sessions?code_type=3
+Level: Medium
+
+Your company operates a VR gaming platform where users can launch and play various virtual reality applications.
+The vr_sessions table records every session initiated by users, capturing when they started an app and when they exited.
+The platform analytics team needs to understand app popularity and usage patterns.
+
+Calculate the total number of unique sessions for each VR application.
+A session is identified by a unique session_id.
+If the same session_id appears multiple times in the table (which can happen due to connection retries or logging issues), count it as only one session by keeping the record with the earliest start_time.
+Include all applications that have at least one session in your results.
+Return the app name and the total number of sessions.
+
+Data vr_sessions:
+session_id: text
+app_name: text
+user_id: text
+start_time: datetime
+end_time: datetime
+
+>.<
+
+Solution:
+
+with dedup as (
+select session_id,app_name,min(start_time) as start_time
+from vr_sessions
+group by session_id,app_name
+)
+select app_name,count(session_id) as total_number_of_sessions
+from dedup
+group by app_name;
+    
+Output:
+
+app_name	total_number_of_sessions
+Beat Saber VR	11
+VR Chat	8
+Half-Life: Alyx	6
+Superhot VR	6
+Moss	6
