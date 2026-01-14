@@ -1,0 +1,59 @@
+>.<
+
+Title: Top Books by Checkout Duration
+Link: https://platform.stratascratch.com/coding/10567-top-books-by-checkout-duration?code_type=3
+Level: Medium
+
+A public library system tracks book circulation to understand which titles generate the most value through patron engagement.
+The library defines a book's lifetime value as the total number of days across all checkout periods for all copies of that book.
+Calculate each book's lifetime value by summing the number of days between checkout date and return date for all completed checkouts.
+Only include books that have more than 10 physical copies in the library's collection.
+Exclude any checkouts where a book hasn't been returned yet.
+
+Return books ranked in the top 3 by lifetime value.
+If books are tied, they receive the same rank with no gaps in ranking (e.g., 1, 1, 2, 3 rather than 1, 1, 3, 4).
+Include all books ranked 1st, 2nd, or 3rd.
+Output the book title, number of copies, and lifetime value in days.
+
+Data library_books:
+book_id: bigint
+title: text
+author: text
+num_copies: bigint
+
+Data library_checkouts:
+checkout_id: bigint
+book_id: bigint
+checkout_date: date
+return_date: date
+
+>.<
+
+Solution:
+
+with valid_checkouts as (
+select book_id, return_date - checkout_date as diff_days
+from library_checkouts
+where return_date is not null
+),
+lifetime_value as (
+select book_id, sum(diff_days) as lifetime_value_days
+from valid_checkouts
+group by book_id
+),
+ranked_books as (
+select lb.title, lb.num_copies, lv.lifetime_value_days, dense_rank() over(order by lifetime_value_days desc) as rnk
+from lifetime_value lv
+join library_books lb on lv.book_id = lb.book_id
+where lb.num_copies > 10
+)
+select title,num_copies,lifetime_value_days
+from ranked_books
+where rnk <= 3;
+    
+Output:
+
+title	num_copies	lifetime_value_days
+The Midnight Library	15	1512
+Project Hail Mary	12	1305
+The Thursday Murder Club	14	905
