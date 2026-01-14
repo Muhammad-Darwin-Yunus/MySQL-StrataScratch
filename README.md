@@ -258,3 +258,4 @@ The Analytical Questions test contains 3 levels, namely Easy, Medium, and Hard.
 |ID 10571|[Vehicle Gear Usage](https://platform.stratascratch.com/coding/10571-vehicle-gear-usage?code_type=3)|Medium|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010571)
 |ID 10570|[Car Part Price](https://platform.stratascratch.com/coding/10570-car-part-price?code_type=3)|Medium|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010570)
 |ID 10569|[VR App Sessions](https://platform.stratascratch.com/coding/10569-vr-app-sessions?code_type=3)|Medium|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010569)
+|ID 10567|[Top Books by Checkout Duration](https://platform.stratascratch.com/coding/10567-top-books-by-checkout-duration?code_type=3)|Medium|[Link](https://github.com/Muhammad-Darwin-Yunus/MySQL-StrataScratch/blob/main/Code%20SQL/ID%2010567)
