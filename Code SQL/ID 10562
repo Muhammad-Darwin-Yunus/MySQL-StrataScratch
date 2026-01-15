@@ -1,0 +1,58 @@
+>.<
+
+Title: Daily Post Removal Ratio
+Link: https://platform.stratascratch.com/coding/10562-daily-post-removal-ratio?code_type=3
+Level: Easy
+
+Calculate the daily ratio of posts removed by reviewers to posts reported by users.
+For each date in the dataset range, count unique posts reported (multiple reports of the same post count as one) and how many of those were removed the same day.
+
+For dates with reported posts but no removals, show zero for removal metrics.
+Calculate removal ratio as removed posts divided by reported posts.
+Output the date, number of reported posts, number of removed posts, and the removal ratio.
+
+Data user_actions:
+user_id: bigint
+date: date
+post_id: bigint
+action: text
+details: text
+
+Data post_removals:
+post_id: bigint
+removal_date: date
+reason: text
+
+>.<
+
+Solution:
+
+with unique_post_per_day as (
+select date, post_id
+from user_actions
+where action = 'report'
+group by date, post_id
+),
+reported_post_per_day as (
+select date, count(post_id) as reported_posts
+from unique_post_per_day
+group by date
+),
+removed_post_per_day as (
+select up.date,count(up.post_id) as removed_posts
+from unique_post_per_day up
+join post_removals pr on up.post_id = pr.post_id and up.date = pr.removal_date
+group by up.date
+)
+select rpd.date,rpd.reported_posts,coalesce(rpmd.removed_posts,0) as removed_post,coalesce(rpmd.removed_posts,0) * 1.0/rpd.reported_posts as removal_ratio
+from reported_post_per_day rpd
+left join removed_post_per_day rpmd on rpd.date = rpmd.date
+order by rpd.date;
+    
+Output:
+
+date	reported_posts	removed_post	removal_ratio
+2024-01-15	5	2	0.4
+2024-01-16	6	2	0.33
+2024-01-18	8	2	0.25
+2024-01-19	9	2	0.22
