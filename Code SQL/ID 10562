@@ -2,7 +2,7 @@
 
 Title: Daily Post Removal Ratio
 Link: https://platform.stratascratch.com/coding/10562-daily-post-removal-ratio?code_type=3
-Level: Easy
+Level: Medium
 
 Calculate the daily ratio of posts removed by reviewers to posts reported by users.
 For each date in the dataset range, count unique posts reported (multiple reports of the same post count as one) and how many of those were removed the same day.
