@@ -1,0 +1,56 @@
+>.<
+
+Title: User Flag Performance Analysis
+Link: https://platform.stratascratch.com/coding/10558-user-flag-performance-analysis?code_type=3
+Level: Medium
+
+You are analyzing user flagging performance on a video platform.
+For each user who has had at least one of their flags reviewed by YouTube, calculate their flagging performance metrics as described below.
+
+Find each user's first name, last name, total number of distinct videos they flagged that had at least one reviewed flag, total number of distinct videos they flagged that were ultimately removed, and the latest date when any of their flags were reviewed.
+
+Data user_flags:
+user_firstname: text
+user_lastname: text
+video_id: text
+flag_id: text
+
+Data flag_review:
+flag_id: text
+reviewed_by_yt: tinyint
+reviewed_date: date
+reviewed_outcome: text
+
+>.<
+
+Solution:
+
+with merge_flag as (
+select uf.user_firstname,uf.user_lastname,uf.video_id,fr.reviewed_by_yt,fr.reviewed_date,fr.reviewed_outcome
+from user_flags uf
+join flag_review fr on uf.flag_id = fr.flag_id
+),
+reviewes_flag as (
+select *
+from merge_flag
+where reviewed_by_yt = 1
+),
+agg_user as (
+select count(distinct video_id) as total_videos_flagged_reviewed, count(distinct case when reviewed_outcome = 'REMOVED' then video_id end) as total_videos_removed,max(reviewed_date) as  latest_reviewed_date,user_firstname, user_lastname
+from reviewes_flag
+group by user_firstname, user_lastname
+)
+select user_firstname,user_lastname,total_videos_flagged_reviewed,total_videos_removed,latest_reviewed_date
+from agg_user;
+    
+Output:
+
+user_firstname	user_lastname	total_videos_flagged_reviewed	total_videos_removed	latest_reviewed_date
+Daniel	Bell	1	1	2022-03-16
+Evelyn	Johnson	1	0	2022-03-17
+Gina	Korman	1	1	2022-03-17
+Mark	Johnson	1	1	2022-03-16
+Mark	May	3	1	2022-03-15
+Pauline	Wilks	1	1	2022-03-17
+Richard	Hasson	2	0	2022-03-18
+William 	Kwan	1	0	2022-03-14
