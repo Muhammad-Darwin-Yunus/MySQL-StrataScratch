@@ -1,0 +1,52 @@
+>.<
+
+Title: Top 2 Highest-Selling Items 
+Link: https://platform.stratascratch.com/coding/10555-top-2-highest-selling-items?code_type=3
+Level: Medium
+
+Management wants to identify the most popular products within each category to optimize inventory and marketing strategies.
+Find the top 2 products with the highest total quantity sold in each category.
+If products within a category have the same total quantity, order them alphabetically by product name and assign consecutive ranks (1, 2, 3, etc.).
+
+For example, if two products in the Electronics category both sold 15 units, then iPad Pro would get rank 1 (alphabetically first) and iPhone 14 would get rank 2 (alphabetically second).
+
+Return the category, product name, total quantity sold, and rank within category.
+You should expect maximum 2 products per category in your results, though some categories might only have 1 product available.
+
+Data ecommerce_transactions:
+txn_id: text
+customer_id: text
+category: text
+product_name: text
+quantity: bigint
+price: double
+
+>.<
+
+Solution:
+
+with product_sales as (
+select category,product_name,sum(quantity) as total_quantity_sold
+from ecommerce_transactions
+group by category,product_name
+),
+ranked_product as (
+select category,product_name,total_quantity_sold,row_number() over(partition by category order by total_quantity_sold desc, product_name asc) as `rank`
+from product_sales
+)
+select category,product_name,total_quantity_sold,`rank`
+from ranked_product
+where `rank` <=2
+order by category, `rank`;
+
+Output:
+
+category	product_name	total_quantity_sold	rank
+Accessories	Tesla Model 3 Keychain	17	1
+Apparel	Netflix Hoodie	9	1
+Electronics	Google Pixel 8	36	1
+Electronics	iPhone 15	32	2
+Gaming	Meta Quest 3	12	1
+Gaming	Microsoft Xbox Series X	12	2
+Smart Home	Amazon Echo	22	1
+Smart Home	Google Nest Hub	16	2
